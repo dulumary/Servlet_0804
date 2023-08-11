@@ -37,7 +37,6 @@
 		
 	%>
 
-	<%= option %>
 	<div class="container">
 		<h1>검색결과</h1>
 		
@@ -55,14 +54,18 @@
 					if(menu.equals(store.get("menu"))) { 
 						// option 값에 따라 tr 태그 포함 여부 결정
 						double point = (Double)store.get("point");
-					
+						// option이 null 일때는 
+						// option 이 on이고, point 가 4.0 이상인경우 
+						if(option == null || point > 4.0) {
+						
 					%>
 				<tr>
 					<td><%= store.get("menu") %></td>
 					<td><%= store.get("name") %></td>
 					<td><%= store.get("point") %></td>
 				</tr>
-				<% } 
+				<% 		}
+					} 
 				} %>
 				
 			</tbody>
