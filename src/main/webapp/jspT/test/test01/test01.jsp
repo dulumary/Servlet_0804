@@ -51,6 +51,7 @@
 	    list.add(map);
 	    
 	    // 보여질 카테고리를 파라미터로 전달 받는다. 
+	    String category = request.getParameter("category");
 	    
 	%>
 
@@ -68,14 +69,17 @@
 					
 				</thead>
 				<tbody>
-					<% for(Map<String, String> channel:list) { 
+					<% for(Map<String, String> channel:list) {
+					
+						if(category == null || category.equals(channel.get("category"))) {
 						%>
 					<tr>
 						<td><%= channel.get("ch") %></td>
 						<td><%= channel.get("name") %></td>
 						<td><%= channel.get("category") %></td>
 					</tr>
-					<% } %>
+					<% } 
+					} %>
 					
 				</tbody>
 			

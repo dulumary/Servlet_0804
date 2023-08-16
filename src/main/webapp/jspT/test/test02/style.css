@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+#wrap {
+	width:1200px;
+	margin:0 auto;
+}
+
+header > .logo {
+	width:200px;
+	height:100px;
+}
+
+header > .search {
+	width:1000px;
+	height:100px;
+}
+
+.main-menu {
+	height:40px;
+}
+
+footer {
+	height:70px;
+}
+
