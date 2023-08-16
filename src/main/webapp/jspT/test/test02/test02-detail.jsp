@@ -39,6 +39,9 @@
     	
     }
     
+    int time = (Integer)target.get("time");
+    int minute = time / 60;
+    int second = time % 60;
     
 %>
 
@@ -57,7 +60,7 @@
 					<div class="text-success mt-1"><%= target.get("singer") %></div>
 					<div class="small text-secondary mt-2">
 						<div>앨범 : <%= target.get("album") %></div>
-						<div>재생 시간 : <%= target.get("time") %></div>
+						<div>재생 시간 : <%= (Integer)target.get("time") / 60  %> : <%= (Integer)target.get("time") % 60 %></div>
 						<div>작곡가 : <%= target.get("composer") %></div>
 						<div>작사가 : <%= target.get("lyricist") %></div>
 					</div>
